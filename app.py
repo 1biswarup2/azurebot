@@ -126,4 +126,7 @@ def clear_chromadb():
     global vectorstore
     vectorstore = None  # or add logic to destroy the database
     return jsonify({"message": "ChromaDB cleared successfully"})
-
+    
+if __name__ == '__main__':
+    # Remove the 'host' parameter
+    app.run(port=80)
